@@ -32,11 +32,19 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void CalculatePrice_GetOfferPrice_Int()
+    public void CalculateOfferPrice_GetOfferPrice_Int()
     {
       int pastryQuantity = 3;
       Pastry newPastry = new Pastry(pastryQuantity);
       Assert.AreEqual(newPastry.CalculateOfferPrice(), 5);
+    }
+
+    [TestMethod]
+    public void CalculateOfferPrice_GetOfferPriceIfRemainder_Int()
+    {
+      int pastryQuantity = 4;
+      Pastry newPastry = new Pastry(pastryQuantity);
+      Assert.AreEqual(newPastry.CalculateOfferPrice(), 7);
     }
   }
 }
