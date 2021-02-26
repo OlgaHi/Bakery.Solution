@@ -13,9 +13,17 @@ namespace Bakery.Models
     public int CalculatePrice()
     { 
       return (Price * Quantity);
-  
     }
 
-
+    public int CalculateOfferPrice()
+    { 
+      if (Quantity % 3 == 0) {
+        return (Price = (Quantity / 3) * 5);
+      }
+      else
+      {
+        return ((Quantity / 3) * 5) + ((Quantity % 3) * Price);
+      }
+     }
   }
 }

@@ -19,8 +19,6 @@ namespace Bakery.Models
         {
           return (Price = Quantity * 5);
         }
-  
     }
-
   }
 }
