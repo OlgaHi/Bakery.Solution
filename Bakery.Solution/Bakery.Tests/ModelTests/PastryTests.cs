@@ -24,8 +24,8 @@ namespace Bakery.Tests
     [TestMethod]
     public void CalculatePrice_GetPastryPrice_Int()
     {
-      
-      Pastry newPastry = new Pastry(1);
+      int pastryQuantity = 1;
+      Pastry newPastry = new Pastry(pastryQuantity);
       Assert.AreEqual(newPastry.CalculatePrice(), 2);
     }
 
