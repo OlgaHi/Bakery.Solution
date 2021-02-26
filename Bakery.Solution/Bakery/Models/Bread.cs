@@ -6,10 +6,10 @@ namespace Bakery.Models
   {
    public int Price { get; set; }
 
-   public Bread(int price)
+   /* public Bread(int price)
     {
       Price = price;
-    }
+    } */
     public int CalculatePrice(int quantity)
     {
       return (Price = quantity * 5);
