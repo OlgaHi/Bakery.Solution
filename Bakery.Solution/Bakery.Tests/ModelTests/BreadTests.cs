@@ -18,8 +18,9 @@ namespace Bakery.Tests
     [TestMethod]
     public void BreadConstructor_CreatesPropertyOfBread_int()
     {
-      Bread newBread = new Bread(1);
-      Assert.AreEqual(newBread.Quantity, 1);
+      int quantityBread = 1;
+      Bread newBread = new Bread(quantityBread);
+      Assert.AreEqual(newBread.Quantity, quantityBread);
     }
   }
 }
