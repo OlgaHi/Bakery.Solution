@@ -5,11 +5,15 @@ namespace Bakery.Models
 {
   public class Bread 
   {
-   public int Quantity { get; }
+   public int Price { get; set; }
 
-   public Bread(int quantity)
+   public Bread(int price)
     {
-      Quantity = quantity;
+      Price = price;
+    }
+    public int CalculatePrice(int quantity)
+    {
+      return (Price = quantity * 5);
     }
 
   }
