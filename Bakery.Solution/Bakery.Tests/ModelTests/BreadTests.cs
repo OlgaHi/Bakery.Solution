@@ -16,11 +16,18 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void BreadConstructor_CreatesPropertyOfBread_int()
+    public void BreadConstructor_CreatesPropertyOfBread_Int()
+    {
+      Bread newBread = new Bread(5);
+      Assert.AreEqual(newBread.Price, 5);
+    }
+
+    [TestMethod]
+    public void CalculatePrice_MultiplesQuantityByFive_Int()
     {
       int quantityBread = 1;
-      Bread newBread = new Bread(quantityBread);
-      Assert.AreEqual(newBread.Quantity, quantityBread);
+      Bread newBread = new Bread(5);
+      Assert.AreEqual(newBread.CalculatePrice(quantityBread), 5);
     }
   }
 }
