@@ -10,6 +10,12 @@ namespace Bakery.Models
     {
       Quantity = quantity;
     }
+    public int CalculatePrice()
+    { 
+      return (Price * Quantity);
+  
+    }
+
 
   }
 }
