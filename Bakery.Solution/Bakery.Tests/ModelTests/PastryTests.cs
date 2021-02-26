@@ -10,15 +10,17 @@ namespace Bakery.Tests
     [TestMethod]
     public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
     {
-      Pastry newPastry = new Pastry(1);
+      int pastryQuantity = 1;
+      Pastry newPastry = new Pastry(pastryQuantity);
       Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
 
     [TestMethod]
     public void PastryConstructor_CreatesPropertyOfPastry_Int()
     {
-      Pastry newPastry = new Pastry(1);
-      Assert.AreEqual(newPastry.Quantity, 1);
+      int pastryQuantity = 1;
+      Pastry newPastry = new Pastry(pastryQuantity);
+      Assert.AreEqual(newPastry.Quantity, pastryQuantity);
     }
 
     [TestMethod]
@@ -29,6 +31,12 @@ namespace Bakery.Tests
       Assert.AreEqual(newPastry.CalculatePrice(), 2);
     }
 
-
+    [TestMethod]
+    public void CalculatePrice_GetOfferPrice_Int()
+    {
+      int pastryQuantity = 3;
+      Pastry newPastry = new Pastry(pastryQuantity);
+      Assert.AreEqual(newPastry.CalculateOfferPrice(), 5);
+    }
   }
 }
