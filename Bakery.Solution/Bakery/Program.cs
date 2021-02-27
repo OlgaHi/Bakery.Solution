@@ -1,5 +1,4 @@
 using System;
-using Bakery;
 using Bakery.Models;
 
 namespace Bakery 
@@ -36,11 +35,11 @@ namespace Bakery
         Pastry newPastry = new Pastry(pastryQuantity);
         if (pastryQuantity > 0 && pastryQuantity < 3)
           {
-            Console.WriteLine("Thank you for your order! The total price of your order is " + newPastry.CalculatePrice() + "$.");
+            Console.WriteLine("Thank you for your order! The total price of your order is " + " " + newPastry.CalculatePrice() + "$.");
           }
-          else if (pastryQuantity > 3)
+          else if (pastryQuantity >= 3)
           {
-            Console.WriteLine("Thank you for your order! The total price of your order is " + newPastry.CalculateOfferPrice() + "$.");
+            Console.WriteLine("Thank you for your order! The total price of your order is " + " " + newPastry.CalculateOfferPrice() + "$.");
           }
           else 
           {
@@ -59,10 +58,25 @@ namespace Bakery
         string inputQuantity = Console.ReadLine();
         int pastryQuantity = int.Parse(inputQuantity);
         Pastry newPastry = new Pastry(pastryQuantity);
+
+        if (breadQuantity > 0 && pastryQuantity > 0 && pastryQuantity < 3) 
+        {
+          Console.WriteLine("Thank you for your order! Your total amount is" + " "+ (newBread.CalculatePrice() + newPastry.CalculatePrice()) + "$.");
+        }
+        else if (breadQuantity > 0 && pastryQuantity >= 3)
+        {
+          Console.WriteLine("Thank you for your order! Your total amount is" + " " + (newBread.CalculatePrice() + newPastry.CalculateOfferPrice()) + "$.");
+        }
+        else 
+        {
+          Console.WriteLine("Please enter a quantity of more than 0!");
+          Main();
+        }
       }
     }
-  } 
-}
+  }
+} 
+
   
 
 
