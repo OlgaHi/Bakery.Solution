@@ -45,11 +45,23 @@ namespace Bakery
           else 
           {
             Console.WriteLine("Please enter a quantity of more than 0!");
-            Main();
+           Main();
           }
+      } else
+      {
+        Console.WriteLine("Today we have a special bread offer: Buy 2, get 1 free. A single loaf costs $5. And also we have special pastry offer: Buy 3 for $5. A single pastry costs $2");
+        Console.WriteLine("Please enter how many loaves of bread would you like");
+        string inputBread = Console.ReadLine();
+        int breadQuantity = int.Parse(inputBread);
+        Bread newBread = new Bread(breadQuantity);
+
+        Console.WriteLine("Please enter how many pastries would you like");
+        string inputQuantity = Console.ReadLine();
+        int pastryQuantity = int.Parse(inputQuantity);
+        Pastry newPastry = new Pastry(pastryQuantity);
       }
     }
-  }
+  } 
 }
   
 
