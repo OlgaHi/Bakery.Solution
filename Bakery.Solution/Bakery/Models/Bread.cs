@@ -11,7 +11,7 @@ namespace Bakery.Models
       Quantity = quantity;
     }
     public int CalculatePrice()
-    { if (Quantity % 3 == 0) 
+    { if (Quantity % 3 == 0 && Quantity > 0) 
         {
           return (Quantity-(Quantity / 3)) * 5;
         }
