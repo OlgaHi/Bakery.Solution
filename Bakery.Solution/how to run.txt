@@ -1,5 +1,0 @@
-Navigate to project file directory
-"ProjectName.Tests"
-
-then run
-dotnet test
