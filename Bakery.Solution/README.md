@@ -7,9 +7,6 @@ Creating this application I used test-driven development technique.
 
 This is a console application for a bakery that will prompt a welcome message and ask the user to select which type of product they would like to purchase. The user will be able to select: bread, pastry or both. The user may specify how many loaves of bread and pastries they would like to buy. At the end the application will display the total cost of the order regarding the user's selection.
 
-
-![Homepage]()
-
 ## Specifications
 
 <details>
@@ -36,16 +33,9 @@ This is a console application for a bakery that will prompt a welcome message an
 
 </details>
 
-
-## Run Tests
-
-- Navigate to Bakery.Tests folder in the command line
-- Use the commands `dotnet build` and `dotnet restore` to make sure code is compiled and packages are installed
-- Use the command `dotnet test` to run tests on all test methods
-  - Total tests: 9
-
- 
 ## Setup
+
+#### To open this application:
 
 - Clone this repository to your desktop, using next command:
 
@@ -55,15 +45,30 @@ This is a console application for a bakery that will prompt a welcome message an
 
   cd Pierre-s-Bakery
 
+#### To run this application:
 
+To run this application you need to install .NET Core. Please follow this steps:
+ - Download [.NET Core SDK (Software Development Kit)](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-2.2.106-macos-x64-installer). Clicking this link will prompt a file download for your particular OS from Microsoft.
+ - Open the file. Follow the installation steps.
+ - Confirm the installation is successful by opening your terminal and running the command $ dotnet --version. You should see something like this in response: 5.0.100. This means .NET was successfully installed.
+ - Navigate to the /Bakery folder 
+ - Run the following command: dotnet build
+ - Run the following command to execute this compiled code: dotnet run
+
+## Run Tests
+
+- Navigate to Bakery.Tests folder 
+- To retrieve and install the packages run the command: dotnet restore
+- Run the following command to run tests on all test methods: dotnet test 
+  - Total tests: 9
+
+![Homepage](./images/screenshot_tdd.png)
 
 ## Technologies Used:
 
 * C#
 * .NET Core
 * MSTest
-
-
 
 ## Known Bugs
 
