@@ -62,7 +62,7 @@ To run this application you need to install .NET Core. Please follow this steps:
 - Run the following command to run tests on all test methods: dotnet test 
   - Total tests: 9
 
-![Homepage](images/screenshot_tdd.png)
+![Image](./images/screenshot_tdd.png)
 
 ## Technologies Used:
 
